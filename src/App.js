@@ -51,13 +51,11 @@ function App() {
     }
   }
   
-
-
   return (
     <div className="App">
 
     <Header 
-        title = "Groceries"
+        title = "Grocery List"
     />
     <AddItem 
         handleSubmit={handleSubmit}

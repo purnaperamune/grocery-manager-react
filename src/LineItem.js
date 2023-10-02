@@ -9,7 +9,9 @@ const LineItem = ({item, handleCheck, handleDelete}) => {
                 checked={item.checked}
                 onChange={() => handleCheck(item.id)}
             />
-            <label>
+            <label
+                style={(item.checked) ? { textDecoration: 'line-through' } : null}
+            >
                 {item.item}
             </label>
             
