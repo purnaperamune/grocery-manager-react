@@ -1,7 +1,7 @@
 import React from 'react'
 import ItemList from './ItemList'
 
-const Content = ( {items} ) => {
+const Content = ( {items, handleCheck, handleDelete} ) => {
     console.log(`Length is ${items.length}`)
 
     return (
@@ -9,7 +9,10 @@ const Content = ( {items} ) => {
             <p>
                 {items.length ? (
                     <ItemList
-                        items={items}   
+                        items={items}  
+                        handleCheck = {handleCheck}
+                        handleDelete = {handleDelete}
+
                     />
                 ) : (
                     <p> List is empty </p>
