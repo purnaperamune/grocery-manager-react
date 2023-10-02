@@ -1,25 +1,22 @@
-import React from 'react'
-import ItemList from './ItemList'
+import React from 'react';
+import ItemList from './ItemList';
 
+// Destructred and passing through props
 const Content = ( {items, handleCheck, handleDelete} ) => {
-    console.log(`Length is ${items.length}`)
-
-    return (
-        <div>
-            <p>
-                {items.length ? (
-                    <ItemList
-                        items={items}  
-                        handleCheck = {handleCheck}
-                        handleDelete = {handleDelete}
-
-                    />
-                ) : (
-                    <p> List is empty </p>
-                )}
-            </p>
-        </div>
-    )
+    
+  return (
+    <main>
+        {items.length ? (
+            <ItemList
+                items={items}
+                handleCheck={handleCheck}
+                handleDelete={handleDelete}
+            />    
+        ) : (
+            <p style={{ marginTop: '2rem' }}>Your list is empty.</p>
+        )}
+    </main>
+)
 }
 
 export default Content
